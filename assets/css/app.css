@@ -42,3 +42,7 @@
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
+
+#chart svg {
+    height: 400px;
+}

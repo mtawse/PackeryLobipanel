@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/lobipanel/dist/css/lobipanel.min.css">
 
+    <link rel="stylesheet" type="text/css" href="bower_components/nvd3/build/nv.d3.min.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -15,12 +17,17 @@
     <!--<script src="bower_components/draggabilly/dist/draggabilly.pkgd.min.js"></script>-->
     <script src="bower_components/lobipanel/dist/js/lobipanel.min.js"></script>
 
+    <script src="assets/js/d3/d3.min.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+    <!--<script src="bower_components/nvd3/src/tooltip.js"></script>-->
+
     <script src="assets/js/app.js"></script>
 </head>
 <body>
-<h1>Packery</h1>
+
 
 <div class="container-fluid">
+    <h1>Packery / Lobipanel / NVD3</h1>
     <!-- add extra container element for Packery -->
     <div class="grid">
         <!-- add sizing element for columnWidth -->
@@ -45,13 +52,16 @@
                         spinach.
                     </div>
                     <div class="panel-footer">
-                        <button type="button" class="btn btn-default col-switch" data-col-width="1" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="1"
+                                aria-label="Left Align">
                             1
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="2" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="2"
+                                aria-label="Left Align">
                             2
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="3" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="3"
+                                aria-label="Left Align">
                             3
                         </button>
                     </div>
@@ -67,18 +77,23 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery
-                        bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot
-                        squash brussels sprout chard.
+                        <div id="chart">
+                            <svg></svg>
+                        </div>
+
+
                     </div>
                     <div class="panel-footer">
-                        <button type="button" class="btn btn-default col-switch" data-col-width="1" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="1"
+                                aria-label="Left Align">
                             1
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="2" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="2"
+                                aria-label="Left Align">
                             2
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="3" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="3"
+                                aria-label="Left Align">
                             3
                         </button>
                     </div>
@@ -94,19 +109,44 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to
-                        throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks.
-                        Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker,
-                        know what I'm sayin'?
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="panel-footer">
-                        <button type="button" class="btn btn-default col-switch" data-col-width="1" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="1"
+                                aria-label="Left Align">
                             1
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="2" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="2"
+                                aria-label="Left Align">
                             2
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="3" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="3"
+                                aria-label="Left Align">
                             3
                         </button>
                     </div>
@@ -123,31 +163,28 @@
                     </div>
                     <div class="panel-body">
                         <p>
-                            Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a
-                            comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite
-                            of
-                            the hero. And most times they're friends, like you and me! I should've known way back
-                            when...
-                            You know why, David? Because of the kids. They called me Mr Glass.
+                            Id mei affert invidunt, autem iracundia dissentiunt te cum, erant dolor phaedrum sit ea.
+                            Torquatos voluptatibus vis an, vel omnis audiam te. Ad cum porro rationibus, oblique utroque
+                            ne vel. Ex his nullam efficiantur, duo mentitum elaboraret ex.
                         </p>
 
                         <p>
-                            Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus
-                            to
-                            throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks.
-                            Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the
-                            motherfucker,
-                            know what I'm sayin'?
+                            Eum audiam discere ad, illud fabulas ancillae ei vim. Fuisset assueverit at sed, vim assum
+                            adipiscing ut. Tota adipisci at vix, ei vix dicta laoreet. Ne quidam praesent urbanitas vis,
+                            et quo hendrerit consequat
                         </p>
                     </div>
                     <div class="panel-footer">
-                        <button type="button" class="btn btn-default col-switch" data-col-width="1" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="1"
+                                aria-label="Left Align">
                             1
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="2" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="2"
+                                aria-label="Left Align">
                             2
                         </button>
-                        <button type="button" class="btn btn-default col-switch" data-col-width="3" aria-label="Left Align">
+                        <button type="button" class="btn btn-default col-switch" data-col-width="3"
+                                aria-label="Left Align">
                             3
                         </button>
                     </div>
