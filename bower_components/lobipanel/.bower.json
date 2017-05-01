@@ -1,0 +1,50 @@
+{
+  "name": "lobipanel",
+  "description": "jQuery plugin for bootstrap panels. It extends panels with several common and useful functions",
+  "main": [
+    "dist/css/lobipanel.min.css",
+    "dist/js/lobipanel.min.js"
+  ],
+  "authors": [
+    {
+      "name": "Zura Sekhniashvili",
+      "email": "zurasekhniashvili@gmail.com",
+      "homepage": "https://github.com/arboshiki"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jQuery",
+    "plugin",
+    "bootstrap panels",
+    "floating windows",
+    "ajax loading panels",
+    "localStorage"
+  ],
+  "homepage": "https://github.com/arboshiki/lobibox",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery-ui": "^1.11.4",
+    "jquery-ui-touch-punch-improved": "^0.3.1"
+  },
+  "version": "0.7.1",
+  "_release": "0.7.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.7.1",
+    "commit": "2e1ad3d73c9504ac987d3418eb756365629fac2e"
+  },
+  "_source": "https://github.com/arboshiki/lobipanel.git",
+  "_target": "^0.7.1",
+  "_originalSource": "lobipanel",
+  "_direct": true
+}
