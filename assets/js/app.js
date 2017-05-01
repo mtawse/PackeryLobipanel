@@ -34,4 +34,16 @@ $(function () {
     $grid.packery('bindUIDraggableEvents', $items);
 
 
+    $('.col-switch').click(function() {
+        var $panelGrid = $(this).closest('.grid-item');
+        var colWidth = $(this).data('col-width');
+        var classes = ['col-md-4', 'col-md-8', 'col-md-12'];
+        var gridClass = classes[colWidth - 1];
+//        alert(gridClass);
+        $panelGrid.removeClass (function (index, className) {
+            return (className.match (/(^|\s)col-\S+/g) || []).join(' ');
+        }).addClass(gridClass);
+        $grid.packery();
+    });
+
 });
